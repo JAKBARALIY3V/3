@@ -1,0 +1,211 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2c29, #14201e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    button.learn-more {
+      width: 12rem;
+      height: auto;
+    }
+
+    button.learn-more .circle {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: relative;
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      background: #050505;
+      border-radius: 1.625rem;
+    }
+
+    button.learn-more .circle .icon.arrow {
+      transition: all 0.45s;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: none;
+      left: 0.625rem;
+      width: 1.125rem;
+      height: 0.125rem;
+    }
+
+    button.learn-more .circle .icon.arrow::before {
+      content: "";
+      position: absolute;
+      top: -0.29rem;
+      right: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #d4af37;
+      border-right: 0.125rem solid #d4af37;
+      transform: rotate(45deg);
+    }
+
+    button.learn-more .button-text {
+      transition: all 0.45s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin-left: 1.85rem;
+      color: #000000;
+      font-weight: 700;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    button:hover .circle {
+      width: 100%;
+    }
+
+    button:hover .circle .icon.arrow {
+      background: #d4af37;
+      transform: translate(1rem, 0);
+    }
+
+    button:hover .button-text {
+      color: #d4af37;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 700px;
+      margin-top: 50px;
+    }
+
+    .flip-card {
+      width: 90%;
+      height: 100%;
+      perspective: 1500px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      transform-style: preserve-3d;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: linear-gradient(to right, #1a3c34, #0a1f1b);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(to right, #2a4d47, #1e2b29);
+    }
+
+    .image,
+    .image-back {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .ezy {
+      font-size: 100px;
+      color: #d4af37;
+      filter: drop-shadow(0 0 15px #000);
+    }
+
+    .h2 {
+      font-size: 24px;
+      color: #fff;
+      font-family: Georgia, serif;
+      text-transform: capitalize;
+    }
+
+    .span {
+      color: #d4af37;
+      font-size: 40px;
+      display: block;
+    }
+
+    .main-section__social-networks a {
+      font-size: 40px;
+      margin: 0 15px;
+      color: #000000;
+      filter: drop-shadow(0 0 10px #d4af37);
+      transition: 0.3s;
+    }
+
+    .main-section__social-networks a:hover {
+      color: #d4af37;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .ezy {
+        font-size: 12vw;
+      }
+
+      .h2 {
+        font-size: 4vw;
+      }
+
+      .span {
+        font-size: 5vw;
+      }
+
+      .image,
+      .image-back {
+        width: 50vw;
+        height: auto;
+      }
+
+      .main-section__social-networks a {
+        font-size: 6vw;
+      }
+    }
