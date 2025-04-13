@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EZY</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <button id="home-btn" class="learn-more">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Home</span>
+    </button>
+    <button id="contact-btn" class="learn-more">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Contact</span>
+    </button>
+  </header>
+
+  <main>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="pngegg.png" alt="hero image" class="image" />
+          <h1 class="ezy">EZY</h1>
+          <h2 class="h2">doesn't mean empty - it means <span class="span">balanced</span></h2>
+        </div>
+        <div class="flip-card-back">
+          <img src="pngegg.png" alt="hero image" class="image-back" />
+          <div class="main-section__social-networks">
+            <a href="https://www.instagram.com/jakbaraliy3v/" target="_blank"><i class="fab fa-square-instagram"></i></a>
+            <a href="https://t.me/jakbaraliy3v" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/+77056609741" target="_blank"><i class="fab fa-square-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const flipCard = document.querySelector('.flip-card');
+
+    flipCard.addEventListener('click', function () {
+      this.classList.toggle('flipped');
+    });
+
+    document.querySelector('#home-btn').addEventListener('click', function () {
+      flipCard.classList.remove('flipped');
+    });
+
+    document.querySelector('#contact-btn').addEventListener('click', function () {
+      flipCard.classList.add('flipped');
+    });
+  </script>
+</body>
+
+</html>
